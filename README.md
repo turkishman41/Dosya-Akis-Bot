@@ -166,13 +166,13 @@ To get an instant stream link, just forward any media to the bot and boom, its f
 
 
 ### Channel Support
-`Bot also Supports with Channels. Just add bot Channel as Admin. If any new file comes in Channel it will edit it with **Get Download Link** Button.` </details>
+`Bot also Supports with Channels. Just add bot Channel as Admin. If any new file comes in Channel it will edit it with Get Download Link Button.` </details>
 
 ### 🔷 Credits : 
 
 - [Adarsh Goel_(me)](https://t.me/codexmania)
 - [EverythingSuckz](https://github.com/EverythingSuckz) 
-- `Everyone In This Journey !`
+- Everyone In This Journey !
 - `Feel free to contribute 😀`
 
   
