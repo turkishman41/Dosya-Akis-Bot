@@ -43,7 +43,7 @@ async def start(b, m):
             except UserNotParticipant:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<i>JOIN @iPRIMEHUB CHANNEL TO USE ME 🔐</i>",
+                    text="<i>JOIN  CHANNEL TO USE ME 🔐</i>",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
