@@ -1,6 +1,6 @@
 
 ## USE LATEST CODE FOR BETTER EXPERINCE
-### This code also works but I recommend using latest code [Click here](https://github.com/everythingsuckz/tg-filestreambot) to deploy it
+### This code also works but I recommend using latest code [Click here](https://github.com/code-x-mania/filestreambot-pro) to deploy it
 ### If it doesnt matter keep scrolling 
 ![GitHub repo size](https://img.shields.io/github/repo-size/code-x-mania/filestreambot?color=yellow)
 [![Telegram Bot](https://img.shields.io/badge/Telegram-Bot-blue.svg)](https://t.me/filetoliprobot)
