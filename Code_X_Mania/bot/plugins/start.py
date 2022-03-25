@@ -1,4 +1,4 @@
-# (c) Code-X-Mania
+# (c) adarsh-goel
 
 from Code_X_Mania.bot import StreamBot
 from Code_X_Mania.vars import Var
@@ -72,7 +72,7 @@ async def start(b, m):
             parse_mode="HTML",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url=f"https://t.me/adarsh_goel"),
-                                                                                       InlineKeyboardButton('Follow ', url='https://github.com/code-x-mania') ] ]  ) )
+                                                                                       InlineKeyboardButton('Follow ', url='https://github.com/adarsh-goel') ] ]  ) )
                                                                                        
                                                                                        
                                                                             
