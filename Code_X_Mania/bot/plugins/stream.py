@@ -1,4 +1,4 @@
-# (c) Code-X-Mania
+# (c) adarsh-goel
 
 import asyncio
 from Code_X_Mania.bot import StreamBot
