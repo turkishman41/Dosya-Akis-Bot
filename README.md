@@ -1,7 +1,4 @@
 
-## USE LATEST CODE FOR BETTER EXPERINCE
-### This code also works but I recommend using latest code [Click here](https://github.com/code-x-mania/filestreambot-pro) to deploy it
-### If it doesnt matter keep scrolling 
 ![GitHub repo size](https://img.shields.io/github/repo-size/code-x-mania/filestreambot?color=yellow)
 [![Telegram Bot](https://img.shields.io/badge/Telegram-Bot-blue.svg)](https://t.me/filetoliprobot)
 [![Telegram -Bot](https://img.shields.io/badge/Telegram-Bot_2-purple.svg)](https://t.me/filetoliprorobot)
@@ -162,7 +159,7 @@ FQDN= Enter Custom domain if any or server ip
 
 
 To get an instant stream link, just forward any media to the bot and boom, its fast af.
-  ![image](https://user-images.githubusercontent.com/88939380/137128326-059f9c53-b3d0-40f0-8484-b17709fbcc11.png)
+![image](https://user-images.githubusercontent.com/88939380/145798095-3cdad108-96b0-4391-a540-cad144d6b864.png)
 
 
 ### Channel Support
