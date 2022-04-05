@@ -27,7 +27,7 @@ async def private_receive_handler(c: Client, m: Message):
         await db.add_user(m.from_user.id)
         await c.send_message(
             Var.BIN_CHANNEL,
-            f"Nᴇᴡ Usᴇʀ Jᴏɪɴᴇᴅ : \n\n Nᴀᴍᴇ : [{m.from_user.first_name}](tg://user?id={m.from_user.id}) Sᴛᴀʀᴛᴇᴅ Yᴏᴜʀ Bᴏᴛ !!"
+            f"Yeni Üye Katıldı: \n\n Ad : [{m.from_user.first_name}](tg://user?id={m.from_user.id}) Bot Çalışıyor !!"
         )
     if Var.UPDATES_CHANNEL != "None":
         try:
@@ -35,7 +35,7 @@ async def private_receive_handler(c: Client, m: Message):
             if user.status == "kicked":
                 await c.send_message(
                     chat_id=m.chat.id,
-                    text="__Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ.__\n\n  **Cᴏɴᴛᴀᴄᴛ Dᴇᴠᴇʟᴏᴘᴇʀ @codexmania Tʜᴇʏ Wɪʟʟ Hᴇʟᴘ Yᴏᴜ**",
+                    text="Üzgünüm Arkadaş, Yasalar İhlali Nedeniyle yasaklandınız ,\n\n ",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -43,11 +43,11 @@ async def private_receive_handler(c: Client, m: Message):
         except UserNotParticipant:
             await c.send_message(
                 chat_id=m.chat.id,
-                text="""<i>Jᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜꜱᴇ ᴍᴇ 🔐</i>""",
+                text="""<i>Kanalımıza Abone olun 🔐</i>""",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Jᴏɪɴ ɴᴏᴡ 🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("İmdi Katıl🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -57,7 +57,7 @@ async def private_receive_handler(c: Client, m: Message):
         except Exception:
             await c.send_message(
                 chat_id=m.chat.id,
-                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍʏ ʙᴏss** @adarsh_goel",
+                text="**HATA !Baş Verdi , Bot Yiyesine Bildirin** @iLqar_TurkSoy",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
@@ -89,33 +89,33 @@ async def private_receive_handler(c: Client, m: Message):
             file_name = f"{m.audio.file_name}"
 
         msg_text ="""
-<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
+<i><u>Bağlantınız Oluşturuldu !</u></i>
 
-<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>
+<b>📂 Dosya Adı :</b> <i>{}</i>
 
-<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>
+<b>📦 Boyut :</b> <i>{}</i>
 
-<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>
+<b>📥 İNDİRMEK :</b> <i>{}</i>
 
-<b> 🖥 WATCH    :</b> <i>{}</i>
+<b> 🖥 AKIŞ    :</b> <i>{}</i>
 
-<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE  </b>
+<b>🚸 Nᴏᴛ :  Bağlantının süresi dolmayacak </b>
 
 """
 
-        await log_msg.reply_text(text=f"**RᴇQᴜᴇꜱᴛᴇᴅ ʙʏ :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**Uꜱᴇʀ ɪᴅ :** `{m.from_user.id}`\n**Dᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ :** {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
+        await log_msg.reply_text(text=f"**İsteyen :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**Kullanıcı kimliği :** `{m.from_user.id}`\n**İndirme Bağlantısı :** {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
         await m.reply_text(
             text=msg_text.format(file_name, file_size, online_link, stream_link),
             parse_mode="HTML", 
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥STREAM", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)]]) #Download Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥AKIŞ", url=stream_link), #Stream Link
+                                                InlineKeyboardButton('İNDİRMEK📥', url=online_link)]]) #Download Link
         )
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
         await asyncio.sleep(e.x)
-        await c.send_message(chat_id=Var.BIN_CHANNEL, text=f"Gᴏᴛ FʟᴏᴏᴅWᴀɪᴛ ᴏғ {str(e.x)}s from [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n\n**𝚄𝚜𝚎𝚛 𝙸𝙳 :** `{str(m.from_user.id)}`", disable_web_page_preview=True, parse_mode="Markdown")
+        await c.send_message(chat_id=Var.BIN_CHANNEL, text=f"Sel beklemesi var {str(e.x)}s from [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n\n**Kullanıcı Kimliği:** `{str(m.from_user.id)}`", disable_web_page_preview=True, parse_mode="Markdown")
 
 
 @StreamBot.on_message(filters.channel & (filters.document | filters.video) & ~filters.edited, group=-1)
@@ -128,7 +128,7 @@ async def channel_receive_handler(bot, broadcast):
         stream_link = Var.URL + 'watch/' + str(log_msg.message_id) 
         online_link = Var.URL + 'download/' + str(log_msg.message_id) 
         await log_msg.reply_text(
-            text=f"**Cʜᴀɴɴᴇʟ Nᴀᴍᴇ:** `{broadcast.chat.title}`\n**Cʜᴀɴɴᴇʟ ID:** `{broadcast.chat.id}`\n**Rᴇǫᴜᴇsᴛ ᴜʀʟ:** {stream_link}",
+            text=f"**Kanal Adı** `{broadcast.chat.title}`\n**Kanal Kimliği:** `{broadcast.chat.id}`\n**İstek ᴜʀʟ:** {stream_link}",
             quote=True,
             parse_mode="Markdown"
         )
@@ -137,8 +137,8 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.message_id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("🖥STREAM ", url=stream_link),
-                     InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)] 
+                    [InlineKeyboardButton("🖥AKIŞ ", url=stream_link),
+                     InlineKeyboardButton('İNDİMEK📥', url=online_link)] 
                 ]
             )
         )
@@ -146,8 +146,8 @@ async def channel_receive_handler(bot, broadcast):
         print(f"Sleeping for {str(w.x)}s")
         await asyncio.sleep(w.x)
         await bot.send_message(chat_id=Var.BIN_CHANNEL,
-                             text=f"Gᴏᴛ FʟᴏᴏᴅWᴀɪᴛ ᴏғ {str(w.x)}s from {broadcast.chat.title}\n\n**Cʜᴀɴɴᴇʟ ID:** `{str(broadcast.chat.id)}`",
+                             text=f"Sel beklemesi var {str(w.x)}s from {broadcast.chat.title}\n\n**Kanal Kinliği:** `{str(broadcast.chat.id)}`",
                              disable_web_page_preview=True, parse_mode="Markdown")
     except Exception as e:
         await bot.send_message(chat_id=Var.BIN_CHANNEL, text=f"**#ᴇʀʀᴏʀ_ᴛʀᴀᴄᴇʙᴀᴄᴋ:** `{e}`", disable_web_page_preview=True, parse_mode="Markdown")
-        print(f"Cᴀɴ'ᴛ Eᴅɪᴛ Bʀᴏᴀᴅᴄᴀsᴛ Mᴇssᴀɢᴇ!\nEʀʀᴏʀ:  **Give me edit permission in updates and bin Chanell{e}**")
+        print(f"Yayın mesajı düzenlenemiyor! \n Hata!: ** Güncellemeler ve bin Kanalında Bana Düzenleme İzni Ver{e}**")
