@@ -89,7 +89,7 @@ async def private_receive_handler(c: Client, m: Message):
             file_name = f"{m.audio.file_name}"
 
         msg_text ="""
-<i><u>Bağlantınız Oluşturuldu !</u></i>
+<i><b>Bağlantınız Oluşturuldu !</b> </i>
 
 <b>📂 Dosya Adı :</b> <i>{}</i>
 
