@@ -65,9 +65,8 @@ async def start(b, m):
             text="""
 Esenlikler Sayğılar 👋,Bu Bot Video/Dosya'nızdan Anında  İndirme ve Akış Bağlantısı vermek için Tasarlanmış.
 
-<b> Bana Bir Video / Dosya Gönderin! </b>
+<b>Bana Bir Video / Dosya Gönderin! </b>
 
-Daha Çox Bilgiler için /help 👈 vurun!
             """,
             parse_mode="HTML",
             disable_web_page_preview=True,
@@ -109,7 +108,7 @@ Daha Çox Bilgiler için /help 👈 vurun!
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="**Hata Baş Verdi , Yöneticiye Bildirin** [iLqar TürkSoy](https://t.me/iLqar_TurkSoy).",
+                    text="**Hata Baş Verdiyi Zaman , Yöneticiye Bildirin** [iLqar TürkSoy](https://t.me/iLqar_TurkSoy).",
                     parse_mode="markdown",
                     disable_web_page_preview=True)
                 return
