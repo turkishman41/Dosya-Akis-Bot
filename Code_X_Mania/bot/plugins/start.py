@@ -142,7 +142,7 @@ Daha Çox Bilgiler için /help 👈 vurun!
             online_link = shortlinka
 
         msg_text ="""
-<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
+<i><u>Bağlantınız Oluşturuldu!</u></i>
 
 <b>📂 Dosya Adı :</b> <i>{}</i>
 
