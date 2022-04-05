@@ -67,6 +67,8 @@ Esenlikler Sayğılar 👋,Bu Bot Video/Dosya'nızdan Anında  İndirme ve Akı�
 
 <b>Bana Bir Video / Dosya Gönderin! </b>
 
+Daha Çok Bilgiler için /help 👈 Vurun
+
             """,
             parse_mode="HTML",
             disable_web_page_preview=True,
@@ -200,13 +202,15 @@ async def help_handler(bot, message):
             await bot.send_message(
                 chat_id=message.chat.id,
                 text=""" 
-                🚸 : <b> Kanal Desteklnir </b>
+                🚸 : Kanal Desteklnir
 
 Bot Ayrıca Kanallardada Desteklenir. 
 
 Botu İstediyiniz Kanala Yönetici olarak eklemeniz yeterlidir. 
 
-Kanala herhangi bir yeni dosya Gönderilirse , İndirme ve Akış Bağlantısının Düğmesi  düzenlenecektir.! [Yönetici](https://t.me/ilqar_turksoy).
+Kanala herhangi bir yeni dosya Gönderilirse , İndirme ve Akış Bağlantısının Düğmesi  düzenlenecektir.! 
+
+Yardım İhtiyacınız Olursa Yaza Bilirsiniz [Yönetici](https://t.me/ilqar_turksoy).
 """,
                 parse_mode="markdown",
                 disable_web_page_preview=True)
