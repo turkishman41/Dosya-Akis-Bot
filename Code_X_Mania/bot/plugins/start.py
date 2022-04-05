@@ -199,7 +199,8 @@ async def help_handler(bot, message):
         except Exception:
             await bot.send_message(
                 chat_id=message.chat.id,
-                text=""" 🚸 : <b> Kanal Desteklemesi </b>
+                text=""" 
+                🚸 : <b> Kanal Desteklnir </b>
 
 Bot Ayrıca Kanallardada Desteklenir. 
 
