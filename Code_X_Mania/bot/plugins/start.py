@@ -226,14 +226,14 @@ Botu İstediyiniz Kanala Yönetici olarak eklemeniz yeterlidir.
 
 Kanala herhangi bir yeni dosya Gönderilirse , İndirme ve Akış Bağlantısının Düğmesi  düzenlenecektir..
 
-Yardıça ihtiyacın Olursa Bana Bilidir.
+Yardıma ihtiyacın Olursa Bana Bilidir.
 👇👇👇👇👇👇
        """,
             parse_mode="HTML",
             
           reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("🤴 Kral ", url="https://t.me/ilqar_turksoy")]
+                [InlineKeyboardButton("🤴 Türk Kralı ", url="https://t.me/ilqar_turksoy")]
             ]
         )
     )
