@@ -217,12 +217,23 @@ Yardım İhtiyacınız Olursa Yaza Bilirsiniz [Yönetici](https://t.me/ilqar_tur
             return
    
     await message.reply_text(
-       text="Bana Telegramdan Dosya / Medya Gönder ,Harici indirme bağlantısı sağlayacağım..",
+       text="""
+       🚸 : Kanal Desteklenir
+
+Bot Ayrıca Kanallardada Desteklenir. 
+
+Botu İstediyiniz Kanala Yönetici olarak eklemeniz yeterlidir. 
+
+Kanala herhangi bir yeni dosya Gönderilirse , İndirme ve Akış Bağlantısının Düğmesi  düzenlenecektir..
+
+Yardıça ihtiyacın Olursa Bana Bilidir.
+👇👇👇👇👇👇
+       """,
             parse_mode="HTML",
             
           reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("😇Bağış Yapmak", url="https://t.me/ilqar_turksoy")]
+                [InlineKeyboardButton("🤴 Kral ", url="https://t.me/ilqar_turksoy")]
             ]
         )
     )
