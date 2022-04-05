@@ -25,7 +25,7 @@ async def start(b, m):
         await db.add_user(m.from_user.id)
         await b.send_message(
             Var.BIN_CHANNEL,
-            f"**Nᴇᴡ Usᴇʀ Jᴏɪɴᴇᴅ:** \n\n__Mʏ Nᴇᴡ Fʀɪᴇɴᴅ__ [{m.from_user.first_name}](tg://user?id={m.from_user.id}) __Sᴛᴀʀᴛᴇᴅ Yᴏᴜʀ Bᴏᴛ !!__"
+            f"**Yeni Üye Katıldı:** \n\n__Yeni Arkadaşım__ [{m.from_user.first_name}](tg://user?id={m.from_user.id}) __Bot Çalışıyor !!__"
         )
     usr_cmd = m.text.split("_")[-1]
     if usr_cmd == "/start":
@@ -35,7 +35,7 @@ async def start(b, m):
                 if user.status == "kicked":
                     await b.send_message(
                         chat_id=m.chat.id,
-                        text="__𝓢𝓞𝓡𝓡𝓨, 𝓨𝓞𝓤 𝓐𝓡𝓔 𝓐𝓡𝓔 𝓑𝓐𝓝𝓝𝓔𝓓 𝓕𝓡𝓞𝓜 𝓤𝓢𝓘𝓝𝓖 𝓜𝓔. 𝓒ᴏɴᴛᴀᴄᴛ ᴛʜᴇ 𝓓ᴇᴠᴇʟᴏᴘᴇʀ__\n\n @codexmania **𝙃𝙚 𝙬𝙞𝙡𝙡 𝙝𝙚𝙡𝙥 𝙮𝙤𝙪**",
+                        text=" Siz Yasaklandiniz \n\n @DTO_Bots **",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -43,11 +43,11 @@ async def start(b, m):
             except UserNotParticipant:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<i>JOIN  CHANNEL TO USE ME 🔐</i>",
+                    text="<i> Kanala Abone ol 🔐</i>",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("JOIN🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                                InlineKeyboardButton("Katıl 🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                             ]
                         ]
                     ),
@@ -57,22 +57,22 @@ async def start(b, m):
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<i>𝓢𝓸𝓶𝓮𝓽𝓱𝓲𝓷𝓰 𝔀𝓮𝓷𝓽 𝔀𝓻𝓸𝓷𝓰</i> <b> <a href='http://t.me/codexmania'>CLICK HERE FOR SUPPORT </a></b>",
+                    text="<i>HATA!! </i> <b> <a href='http://t.me/DTO_Bots'> Yardım için Tıkla </a></b>",
                     parse_mode="HTML",
                     disable_web_page_preview=True)
                 return
         await m.reply_text(
             text="""
-<i>👋 ꜰɪʟᴇ ᴛᴏ ʟɪɴᴋ ʙᴏᴛ ᴡɪᴛʜ ʙᴏᴛʜ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴᴅ ꜱᴛʀᴇᴀᴍ ʟɪɴᴋ ꜱᴜᴘᴘᴏʀᴛ</i>\n
-<i>Send a file/video and see magic!<i>\n
-<i>Cʟɪᴄᴋ ᴏɴ /help ᴛᴏ ɢᴇᴛ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</i>\n
-<i><b>It is your responsibility to use wisely I dont take responsibilities of any voilations(of any kind)</i>\n
-<i><u>𝗪𝗔𝗥𝗡𝗜𝗡𝗚 🚸</u></i>\n
-<b>Dont Spam.</b>""",
+Esenlikler Sayğılar 👋,Bu Bot Video/Dosya'nızdan Anında  İndirme ve Akış Bağlantısı vermek için Tasarlanmış.
+
+<b> Bana Bir Video / Dosya Gönderin! </b>
+
+Daha Çox Bilgiler için /help 👈 vurun!
+            """,
             parse_mode="HTML",
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Owner', url=f"https://t.me/adarsh_goel"),
-                                                                                       InlineKeyboardButton('Follow ', url='https://github.com/adarsh-goel') ] ]  ) )
+            reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton('Yiyesi', url=f"https://t.me/iLqar_TurkSoy"),
+                                                                                       InlineKeyboardButton('Takip Et ', url='https://t.me/turandizi') ] ]  ) )
                                                                                        
                                                                                        
                                                                             
@@ -83,7 +83,7 @@ async def start(b, m):
                 if user.status == "kicked":
                     await b.send_message(
                         chat_id=m.chat.id,
-                        text="**Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ. Qᴜɪᴄᴋʟʏ ᴄᴏɴᴛᴀᴄᴛ** @codexmaniachat",
+                        text="**Üzgünüm , Siz Yasaklandanız , Yöneticile iletişime Geçin** @ilqar_TurkSoy",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -91,14 +91,14 @@ async def start(b, m):
             except UserNotParticipant:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="**Pʟᴇᴀsᴇ Jᴏɪɴ  Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴛʜɪs Bᴏᴛ**!\n\n**Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ**!",
+                    text="**Botu Kullanmak için Kanala Abone Olmayın Gerekir**!",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                                InlineKeyboardButton("🤖 Kanalimiz", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                             ],
                             [
-                                InlineKeyboardButton("🔄 Refresh / Try Again",
+                                InlineKeyboardButton("🔄 Yenile / Yeniden dene",
                                                      url=f"https://t.me/{Var.APP_NAME}.herokuapp.com/{usr_cmd}") # Chnage ur app name
                             ]
                         ]
@@ -109,7 +109,7 @@ async def start(b, m):
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ** [ADARSH GOEL](https://t.me/codexmania).",
+                    text="**Hata Baş Verdi , Yöneticiye Bildirin** [iLqar TürkSoy](https://t.me/iLqar_TurkSoy).",
                     parse_mode="markdown",
                     disable_web_page_preview=True)
                 return
@@ -144,23 +144,23 @@ async def start(b, m):
         msg_text ="""
 <i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
 
-<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>
+<b>📂 Dosya Adı :</b> <i>{}</i>
 
-<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>
+<b>📦 Boyut :</b> <i>{}</i>
 
-<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>
+<b>📥 İndirmek :</b> <i>{}</i>
 
-<b> 🖥WATCH  :</b> <i>{}</i>
+<b> 🖥Akış  :</b> <i>{}</i>
 
-<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE</b>
+<b>🚸 Dikkat:  Ben silene kadar bağlantının süresi dolmayacak </b>
 
 """
 
         await m.reply_text(
             text=msg_text.format(file_name, file_size, online_link, stream_link),
             parse_mode="HTML",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥STREAM", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ📥', url=online_link)]]) #Download Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥AKIŞ", url=stream_link), #Stream Link
+                                                InlineKeyboardButton('İNDİRMEK📥', url=online_link)]]) #Download Link
         )
 
 
@@ -170,7 +170,7 @@ async def help_handler(bot, message):
         await db.add_user(message.from_user.id)
         await bot.send_message(
             Var.BIN_CHANNEL,
-            f"**Nᴇᴡ Usᴇʀ Jᴏɪɴᴇᴅ **\n\n__Mʏ Nᴇᴡ Fʀɪᴇɴᴅ__ [{message.from_user.first_name}](tg://user?id={message.from_user.id}) __Started Your Bot !!__"
+            f"**Yeni üye katıldı **\n\n__Yeni Arkadaşım__ [{message.from_user.first_name}](tg://user?id={message.from_user.id}) __Bot Çalışıyor !!__"
         )
     if Var.UPDATES_CHANNEL is not None:
         try:
@@ -178,7 +178,7 @@ async def help_handler(bot, message):
             if user.status == "kicked":
                 await bot.send_message(
                     chat_id=message.chat.id,
-                    text="<i>Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ FROM USING ᴍᴇ. Cᴏɴᴛᴀᴄᴛ ᴛʜᴇ Dᴇᴠᴇʟᴏᴘᴇʀ</i>",
+                    text="<i>    Üzgünüm Arkadaş, Yasalar İhlali Nedeniyle yasaklandınız </i>",
                     parse_mode="HTML",
                     disable_web_page_preview=True
                 )
@@ -186,11 +186,11 @@ async def help_handler(bot, message):
         except UserNotParticipant:
             await bot.send_message(
                 chat_id=message.chat.id,
-                text="**Pʟᴇᴀsᴇ Jᴏɪɴ  Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴛʜɪs Bᴏᴛ!**\n\n__Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ!__",
+                text=" Bot kullanmak için lütfen kanala katılın.",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("🤖 Kanal", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -200,18 +200,18 @@ async def help_handler(bot, message):
         except Exception:
             await bot.send_message(
                 chat_id=message.chat.id,
-                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ ADARSH GOEL](https://t.me/codexmania).",
+                text=" Hata Baş Verdi , Yöneticiye Bildirin! [Yönetici](https://t.me/ilqar_turksoy).",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
    
     await message.reply_text(
-       text="Send me any file/media from telegram, I'll provide external direct download link..",
+       text="Bana Telegramdan Dosya / Medya Gönder ,Harici indirme bağlantısı sağlayacağım..",
             parse_mode="HTML",
             
           reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("😇Donate", url="https://t.me/codexmania")]
+                [InlineKeyboardButton("😇Bağış Yapmak", url="https://t.me/ilqar_turksoy")]
             ]
         )
     )
