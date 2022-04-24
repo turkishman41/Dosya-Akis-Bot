@@ -91,13 +91,13 @@ async def private_receive_handler(c: Client, m: Message):
         msg_text ="""
 <i><b>Bağlantınız Oluşturuldu !</b> </i>
 
-<b>📂 Dosya Adı :</b> <i>{}</i>
+<b>📂 𝑫𝒐𝒔𝒚𝒂 𝑨𝒅𝒊 :</b> <i>{}</i>
 
-<b>📦 Boyut :</b> <i>{}</i>
+<b>📦 𝑩𝒐𝒚𝒖𝒕 :</b> <i>{}</i>
 
-<b>📥 İNDİRMEK :</b> <i>{}</i>
+<b> ⤵️ 𝒊𝒏𝒅𝒊𝒓 :</b> <i>{}</i>
 
-<b> 🖥 AKIŞ    :</b> <i>{}</i>
+<b> 🖥 𝑨𝒈 𝑨𝒌𝒊𝒔𝒊    :</b> <i>{}</i>
 
 <b>🚸 Nᴏᴛ :  Bağlantının süresi dolmayacak </b>
 
@@ -109,8 +109,8 @@ async def private_receive_handler(c: Client, m: Message):
             parse_mode="HTML", 
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥AKIŞ", url=stream_link), #Stream Link
-                                                InlineKeyboardButton('İNDİRMEK📥', url=online_link)]]) #Download Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🖥 𝑨𝒈 𝑨𝒌𝒊𝒔𝒊", url=stream_link), #Stream Link
+                                                InlineKeyboardButton('⤵️  𝒊𝒏𝒅𝒊𝒓', url=online_link)]]) #Download Link
         )
     except FloodWait as e:
         print(f"Sleeping for {str(e.x)}s")
@@ -137,8 +137,8 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.message_id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("🖥AKIŞ ", url=stream_link),
-                     InlineKeyboardButton('İNDİMEK📥', url=online_link)] 
+                    [InlineKeyboardButton("🍿  𝒊𝒛𝒍𝒆 ", url=stream_link),
+                     InlineKeyboardButton('⤵️  𝒊𝒏𝒅𝒊𝒓', url=online_link)] 
                 ]
             )
         )
